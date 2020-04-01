@@ -1,0 +1,94 @@
+h1 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 50px;
+    color: #FFDFBA;
+}
+
+h2 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+h3 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: #014593;
+}
+
+h4 {
+    font-family: OpenSans;
+    font-size: 16px;
+    line-height: 24px;
+    color: #AB9A88;
+}
+
+button {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #014493;
+}
+
+.button__menu {
+    font-family: OpenSans;
+    font-size: 13px;
+    line-height: 15px;
+    color: #014593;
+}
+
+nav {
+    ol {
+        li {
+            font-family: OpenSans;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+            &:hover {
+                font-style: normal;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+p {
+    font-family: OpenSans;
+    font-size: 16px;
+    line-height: 24px;
+    color: #014593;
+}
+
+a {
+    font-family: OpenSans;
+    font-size: 13px;
+    line-height: 16px;
+    color: #014593;
+}
+
+@media only screen and (max-width: 1024px) {
+    h4 {
+        font-size: 14px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .button__menu {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
