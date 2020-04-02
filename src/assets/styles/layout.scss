@@ -1,0 +1,18 @@
+.wrapper-container {
+    width: 940px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper-container {
+        width: auto;
+        margin: 0 43px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper-container {
+        width: 327px;
+        margin: auto;
+    }
+}
