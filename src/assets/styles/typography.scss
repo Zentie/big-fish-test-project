@@ -32,7 +32,7 @@ h4 {
     color: #AB9A88;
 }
 
-button {
+.button--primary {
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
@@ -43,7 +43,7 @@ button {
     color: #014493;
 }
 
-.button__menu {
+.button--menu {
     font-family: Open Sans;
     font-size: 13px;
     line-height: 15px;
@@ -51,7 +51,7 @@ button {
 }
 
 .login-text {
-    font-family: OpenSans;
+    font-family: Open Sans;
     font-size: 10px;
     line-height: 20px;
     color: #014593;
@@ -73,8 +73,7 @@ nav {
             line-height: 24px;
             color: #FFFFFF;
             &:hover {
-                font-style: normal;
-                font-weight: bold;
+                text-shadow: 0px 0px 1px #FFFFFF;
             }
         }
     }
@@ -82,8 +81,8 @@ nav {
 
 p {
     font-family: Open Sans;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 21px;
+    line-height: 30px;
     color: #014593;
 }
 

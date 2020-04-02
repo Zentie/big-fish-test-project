@@ -1,15 +1,48 @@
 .navigation {
     padding-top: 13px;
-
+    padding-bottom: 13px;
+    position: sticky;
+    top: 0px;
+    margin-bottom: -62px;
     .budapest-logo {
         height: fit-content;
     }
     nav {
         padding-top: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
         ol {
             
         }
     }
 
+    .navigation__button-container {
+        margin-top: 6px;
+    }
 
+    @media only screen and (max-width: 1024px) {
+
+    }
+    
+    @media only screen and (max-width: 375px) {
+    
+    }
 }
+
+.fade-in {
+    //background-color: #014593;
+    background-color: black;
+    transition: background-color 1s linear; 
+    -moz-transition: background-color 1s linear;  
+    -webkit-transition: background-color 1s linear; 
+    -ms-transition: background-color 1s linear;
+}
+
+.fade-out {
+    background-color: transparent;
+    transition: background-color 1s linear; 
+    -moz-transition: background-color 1s linear;  
+    -webkit-transition: background-color 1s linear; 
+    -ms-transition: background-color 1s linear;
+}
+

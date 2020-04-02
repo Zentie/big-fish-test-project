@@ -8,14 +8,37 @@
         background:
             url(../../assets/images/alpha.png),
             url(../../assets/images/picture-bg.jpg);
+        background-size: cover;
     }
-}
 
+    h1 {
+        margin-top: 151px;
+    }
 
-@media only screen and (max-width: 1024px) {
+    h2 {
+        margin-top: 76px;
+    }
 
-}
+    button {
+        width: 190px;
+        margin-top: 76px;
+    }
 
-@media only screen and (max-width: 375px) {
+    .home-content {
+        margin-top: 30px;
+        margin-bottom: 40px;
 
+        p {
+            width: 463px;
+            margin: 40px 55px;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+
+    }
+    
+    @media only screen and (max-width: 375px) {
+    
+    }
 }

@@ -1,19 +1,32 @@
-<div class="navigation wrapper-container" fxLayout="row">
-    <img class="budapest-logo" src="/assets/images/BP-logo-white.png" alt="budapest-logo">
-    <nav fxLayout="row">
-        <ol fxLayout="row">
-            <li>
-                Lorem ipsum
-            </li>
-            <li>
-                Dolorsit
-            </li>
-            <li>
-                Consectetur
-            </li>
-            <li>
-                En <img src="/assets/icons/chevron-down.svg">
-            </li>
-        </ol>
-    </nav>
+<div class="navigation" [ngClass]="fadeStyle" fxLayout="row">
+    <div class="wrapper-container">
+        <img class="budapest-logo" src="/assets/images/BP-logo-white.png" alt="budapest-logo">
+        <nav fxLayout="row" fxFlex>
+            <ol fxLayout="row" fxLayoutGap="27px">
+                <li>
+                    Lorem ipsum
+                </li>
+                <li>
+                    Dolorsit
+                </li>
+                <li>
+                    Consectetur
+                </li>
+                <li>
+                    En <img src="/assets/icons/chevron-down.svg">
+                </li>
+            </ol>
+        </nav>
+        <div class="navigation__button-container" fxLayoutGap="20px" fxLayout="row">
+            <button class="button--menu" fxLayout="row" fxLayoutAlign="space-between">
+                <span>Chat</span>
+                <img src="/assets/icons/icn-bubble-negative.svg">
+            </button>
+            <button class="button--menu" fxLayout="row" fxLayoutAlign="space-between">
+                <span>Login</span>
+                <img src="/assets/icons/icn-login-negative.svg">
+            </button>
+        </div>
+    </div>
+
 </div>
