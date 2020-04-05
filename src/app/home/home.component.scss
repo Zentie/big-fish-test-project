@@ -9,6 +9,7 @@
             url(../../assets/images/alpha.png),
             url(../../assets/images/picture-bg.jpg);
         background-size: cover;
+        background-position: center;
     }
 
     h1 {
@@ -54,7 +55,14 @@
         }
     }
     
-    @media only screen and (max-width: 375px) {
-    
+    @media only screen and (max-width: 600px) {
+        .home-content {
+            img {
+                display: none;
+            }
+            p {
+                width: 100%;
+            }
+        }
     }
 }

@@ -7,6 +7,10 @@
     .burger-menu {
         display: none;
     }
+    .burger-container {
+        display: none !important;
+
+    }
     .budapest-logo {
         height: fit-content;
         cursor: pointer;
@@ -22,7 +26,7 @@
                 to {top:70px; opacity: 1}
             }
 
-            @-webkit-keyframes mymove /* Safari and Chrome */ {
+            @-webkit-keyframes mymove {
                 from {top:60px; opacity: 0;}
                 to {top:70px; opacity: 1;}
             }
@@ -30,10 +34,9 @@
     }
 
     .navigation__dropdown {
-        animation:mymove 3s ease-out forwards;
+        animation: mymove 3s ease-out forwards;
         animation-iteration-count:1;
-        /* Safari and Chrome */
-        -webkit-animation:mymove 1s;
+        -webkit-animation: mymove 1s;
         -webkit-animation-iteration-count:1;
         display: block;
         position: absolute;
@@ -41,9 +44,6 @@
         background:white;
         border: 1px solid #ECF0FF;
         border-radius: 6px;
-        // width: 696px;
-        // height: 266px;
-        // margin-left: -80px;
         &:after {
             bottom: 100%;
             border: solid transparent;
@@ -142,6 +142,10 @@
     left: 0 !important;
 }
 
+.button--menu--mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 1024px) {
     .navigation {
         .burger-menu {
@@ -152,6 +156,7 @@
             cursor: pointer;
         }
         .burger-container {
+            display: inline-block !important;
             position: absolute;
             height: 100vh;
             overflow: scroll !important;
@@ -177,11 +182,16 @@
                     margin-right: 10px;
                 }
             }
+            .close-menu {
+                margin-top: 10px;
+            }
+            .mobile-menu-view {
+                display: none;
+            }
         }
 
         .language-dropdown {
             width: 168px;
-            height: 166px;
             margin-left: -120px;
             h4 {
                 padding-left: 36px;
@@ -210,7 +220,76 @@
         }
     }    
 }
+@media only screen and (max-width: 690px) {
+    .burger-container {
+        padding: 15px !important;
+        width: 375px !important;
+        .button--primary {
+            margin-top: 15px;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        .mobile-menu-view {
+            display: inline !important;
+        }
+    }
 
-@media only screen and (max-width: 375px) {
+    .button--menu--mobile {
+        display: inline-block !important;
+        margin-top: 5px;
+    }
 
+    .button--menu {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border: 1px solid #014593;
+    }
+
+    .login-pic {
+        margin-top: 0 !important;
+        img {
+            height: 28px;
+        }
+    }
+
+    .login-pic--menu {
+        margin-top: 20px !important;
+        img {
+            height: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navigation__button-container {
+        .button--menu {
+            display: none !important;
+        }
+    }
+
+    .button--menu--mobile {
+        display: inline-block !important;
+        margin-top: 5px;
+    }
+
+    .button--menu {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border: 1px solid #014593;
+    }
+
+    .login-pic {
+        margin-top: 0 !important;
+        img {
+            height: 28px;
+        }
+    }
+
+    .login-pic--menu {
+        margin-top: 20px !important;
+        img {
+            height: 40px;
+        }
+    }
 }

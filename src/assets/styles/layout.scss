@@ -11,8 +11,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+    br {
+        display: none !important;
+    }
     .wrapper-container {
-        width: 327px;
-        margin: auto;
+        padding: 0 24px;
     }
 }
