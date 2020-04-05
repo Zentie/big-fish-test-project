@@ -13,7 +13,6 @@ export class NavigationComponent implements OnInit {
   public isLanguageOpened: boolean = false
   public isLoggedIn: boolean = false
   public isProfileDropdownOpened: boolean = false
-  public isBurgerMenuOpened: boolean = false
 
   constructor() { }
 
@@ -34,11 +33,9 @@ export class NavigationComponent implements OnInit {
   }
 
   slideOutMenu() {
-    this.isBurgerMenuOpened = true
     this.slideStyle = "slide-in"
   }
   slideInMenu() {
-    this.isBurgerMenuOpened = false
     this.slideStyle = ""
   }
 

@@ -154,14 +154,49 @@
         .burger-container {
             position: absolute;
             height: 100vh;
-            min-height: 728px;
-            overflow: scroll;
+            overflow: scroll !important;
             width: 510px;
             background-color: white;
             top: 0;
             left: -510px;
             transition: 0.5s;
+            padding: 15px 55px;
+            h3 {
+                margin-top: 21px;
+            }
+            .menu-divider {
+                border-bottom: 1px solid #DFE3E8;
+                margin-top: 16px;
+            }
+            h4{
+                cursor: pointer;
+            }
+            .menu-language {
+                margin-top: 10px;
+                img {
+                    margin-right: 10px;
+                }
+            }
         }
+
+        .language-dropdown {
+            width: 168px;
+            height: 166px;
+            margin-left: -120px;
+            h4 {
+                padding-left: 36px;
+                padding-bottom: 6px;
+                margin-top: 9px;
+                border-bottom: 1px solid #DFE3E8;
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+            .last {
+                border: none;
+            }
+        }
+
         nav {
             display: none !important;
         }
