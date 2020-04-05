@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, EventEmitter, Output, ElementRef, Directive } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -8,10 +8,20 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class NavigationComponent implements OnInit {
 
   public fadeStyle: string = ""
+  public slideStyle: string = ""
+  public isLoremOpened: boolean = false
+  public isLanguageOpened: boolean = false
+  public isLoggedIn: boolean = false
+  public isProfileDropdownOpened: boolean = false
+  public isBurgerMenuOpened: boolean = false
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  login() {
+    this.isLoggedIn = true;
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -21,5 +31,34 @@ export class NavigationComponent implements OnInit {
       this.fadeStyle = "fade-in"
     else
       this.fadeStyle = "fade-out"
+  }
+
+  slideOutMenu() {
+    this.isBurgerMenuOpened = true
+    this.slideStyle = "slide-in"
+  }
+  slideInMenu() {
+    this.isBurgerMenuOpened = false
+    this.slideStyle = ""
+  }
+
+}
+
+@Directive({
+  selector: '[clickOutside]'
+})
+export class HighlightDirective {
+
+  @Output('clickOutside') clickOutside: EventEmitter<any> = new EventEmitter();
+
+  constructor(
+    private _elementRef: ElementRef
+  ) { }
+
+  @HostListener('document:click', ['$event.target']) onMouseEnter(targetElement) {
+    const clickedInside = this._elementRef.nativeElement.contains(targetElement);
+    if (!clickedInside) {
+      this.clickOutside.emit(null);
+    }
   }
 }

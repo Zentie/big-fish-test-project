@@ -1,31 +1,103 @@
 <div class="navigation" [ngClass]="fadeStyle" fxLayout="row">
     <div class="wrapper-container">
-        <img class="budapest-logo" src="/assets/images/BP-logo-white.png" alt="budapest-logo">
+        <a (clickOutside)="slideInMenu()" (click)="slideOutMenu()"
+        class="burger-menu">
+            <img src="/assets/icons/hamburger-menu.svg" alt="">
+            <div [ngClass]="slideStyle" class="burger-container" fxLayout="column">
+                <h1>YAAAY</h1>
+            </div>
+        </a>
+        <a href="#"><img class="budapest-logo" src="/assets/images/BP-logo.svg" alt="budapest-logo"></a>
         <nav fxLayout="row" fxFlex>
             <ol fxLayout="row" fxLayoutGap="27px">
-                <li>
-                    Lorem ipsum
+                <li
+                (clickOutside)="isLoremOpened = false" (click)="isLoremOpened = true">
+                    <a href="#">Lorem ipsum</a>
+                    <div *ngIf="isLoremOpened" class="navigation__dropdown lorem-dropdown">
+                        <div fxLayout="row" class="navigation__dropdown__container">
+                            <div fxLayout="column">
+                                <div fxLayoutGap="18px" class="submenu--item divider" fxLayout="row">
+                                    <img src="/assets/icons/icn-capitol.svg" alt="">
+                                    <div fxLayout="column" fxFlex>
+                                        <h4 fxFlex>Sed lacinia</h4>
+                                        <div class="button--menu" fxFlex>Magna tincidunt venenatis</div>
+                                    </div>
+                                </div>
+                                <div fxLayoutGap="18px" class="submenu--item divider" fxLayout="row">
+                                    <img src="/assets/icons/icn-passport.svg" alt="">
+                                    <div fxLayout="column">
+                                        <h4>Praesent consequat</h4>
+                                        <div class="button--menu">Felis sit amet vehicula molestie</div>
+                                    </div>
+                                </div>
+                                <div fxLayoutGap="18px" class="submenu--item" fxLayout="row">
+                                    <img src="/assets/icons/icn-ferris-wheel.svg" alt="">
+                                    <div fxLayout="column">
+                                        <h4>Aenean lacinia viverra </h4>
+                                        <div class="button--menu">Class aptent taciti sociosqu ad</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div fxLayout="column">
+                                <div fxLayoutGap="18px" class="submenu--item divider" fxLayout="row">
+                                    <img src="/assets/icons/icn-motorcycle.svg" alt="">
+                                    <div fxLayout="column">
+                                        <h4>Praesent venenatis?</h4>
+                                        <div class="button--menu">Quis enim faucibus nisi convallis</div>
+                                    </div>
+                                </div>
+                                <div fxLayoutGap="18px" class="submenu--item divider" fxLayout="row">
+                                    <img src="/assets/icons/icn-bikini.svg" alt="">
+                                    <div fxLayout="column">
+                                        <h4>Etiam finibus molestie</h4>
+                                        <div class="button--menu">Curabitur lobortis pellentesque congue</div>
+                                    </div>
+                                </div>
+                                <div fxLayoutGap="18px" class="submenu--item" fxLayout="row">
+                                    <img src="/assets/icons/icn-cable-car-cabin.svg" alt="">
+                                    <div fxLayout="column">
+                                        <h4>Duis varius massa</h4>
+                                        <div class="button--menu">Praesent suscipit venenatis justo</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    Dolorsit
+                    <a href="#">Dolorsit</a>
                 </li>
                 <li>
-                    Consectetur
+                    <a href="#">Consectetur</a>
                 </li>
-                <li>
+                <li (clickOutside)="isLanguageOpened = false" (click)="isLanguageOpened = true">
                     En <img src="/assets/icons/chevron-down.svg">
+                    <div *ngIf="isLanguageOpened" class="navigation__dropdown language-dropdown" fxLayout="column">
+                        <h4>Deutch</h4>
+                        <h4>English</h4>
+                        <h4>Françias</h4>
+                        <h4 class="last">Magyar</h4>
+                    </div>
                 </li>
             </ol>
         </nav>
-        <div class="navigation__button-container" fxLayoutGap="20px" fxLayout="row">
+        <div class="navigation__button-container" fxLayoutGap="18px" fxLayout="row">
             <button class="button--menu" fxLayout="row" fxLayoutAlign="space-between">
                 <span>Chat</span>
                 <img src="/assets/icons/icn-bubble-negative.svg">
             </button>
-            <button class="button--menu" fxLayout="row" fxLayoutAlign="space-between">
+            <button *ngIf="!isLoggedIn" (click)="login()" class="button--menu" fxLayout="row" fxLayoutAlign="space-between">
                 <span>Login</span>
                 <img src="/assets/icons/icn-login-negative.svg">
             </button>
+            <a (clickOutside)="isProfileDropdownOpened = false" (click)="isProfileDropdownOpened = true" *ngIf="isLoggedIn" class="login-pic">
+                <img src="/assets/images/user-picture.png" alt="gurl">
+                <div *ngIf="isProfileDropdownOpened" class="navigation__dropdown profile-dropdown language-dropdown" fxLayout="column">
+                    <h4>Dashboard</h4>
+                    <h4>My Account</h4>
+                    <h4 class="last">Log out</h4>
+                </div>
+            </a>
         </div>
     </div>
 

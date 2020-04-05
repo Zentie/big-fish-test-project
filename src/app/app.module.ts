@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { NavigationComponent, HighlightDirective } from './navigation/navigation.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
@@ -12,6 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppComponent,
     HomeComponent,
     NavigationComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
